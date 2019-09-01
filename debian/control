@@ -1,0 +1,42 @@
+Source: glf
+Priority: optional
+Section: graphics
+Priority: optional
+Maintainer: Javier Ros <jros@unavarra.es>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.6.0
+
+Package: glf
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: libglf
+Description: The GLF Library (Version 1.4.0)
+ Provides font
+ rendering in OpenGL GLF is multiplatforming library for
+ displaying text in OpenGL. This library differs from other
+ libraries by simplicity of use and only by one included
+ file (glf.c and header glf.h). For working of library it
+ is necessary to have the file with the font, by which you
+ will display symbols. You can to use up to 256 loaded fonts
+ at once (setted by default or more if You want).
+ This is the development package: no static library, no
+ import library and no header.
+
+Package: glf-dev
+Section: devel
+Architecture: any
+Depends: glf (= ${Source-Version})
+Description:  The GLF Library (Version 1.4.0)
+ Provides font
+ rendering in OpenGL GLF is multiplatforming library for
+ displaying text in OpenGL. This library differs from other
+ libraries by simplicity of use and only by one included
+ file (glf.c and header glf.h). For working of library it
+ is necessary to have the file with the font, by which you
+ will display symbols. You can to use up to 256 loaded fonts
+ at once (setted by default or more if You want).
+ This is the development package: static library, import
+ library and header.
+
+

@@ -1,0 +1,22 @@
+libtool --mode=compile gcc -I/usr/include/GL -Wall -O -c glf.c
+
+libtool --mode=link gcc -I/usr/include/GL -Wall -O -o libglf.la glf.lo \
+                -rpath /usr/lib -lm -version-info 1:40
+
+#gcc -I/usr/include/GL -Wall -c test.c
+
+#libtool gcc -I/usr/include/GL -L/usr/lib -Wall -o test test.o -lglf -L/usr/X11R6/lib -lglut -lGLU -lGL -lXmu -lXt -lX11 -lXi -lm
+
+#libtool --mode=install -c libglf.la /usr/lib/libglf.la
+
+# libtool install -c libglf.la /usr/lib/libglf.la
+#*** Warning: inferring the mode of operation is deprecated.
+#*** Future versions of Libtool will require -mode=MODE be specified.
+#install -c .libs/libglf.so.0.0.0 /usr/lib/libglf.so.0.0.0
+#(cd /usr/lib && rm -f libglf.so.0 && ln -s libglf.so.0.0.0 libglf.so.0)
+#(cd /usr/lib && rm -f libglf.so && ln -s libglf.so.0.0.0 libglf.so)
+#install -c .libs/libglf.lai /usr/lib/libglf.la
+#install -c .libs/libglf.a /usr/lib/libglf.a
+#ranlib /usr/lib/libglf.a
+#chmod 644 /usr/lib/libglf.a
+#PATH="$PATH:/sbin" ldconfig -n /usr/lib

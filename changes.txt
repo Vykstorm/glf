@@ -1,0 +1,133 @@
+Version 1.4 (18 May 2001)
+---------------------------------
+ * Added support for text rotation (any angle)
+ * Added support for text direction (left, right, up, down)
+ * Added new demo, that demonstrates text rotation and text direction
+ * Bug fixes
+
+Version 1.3 (01 May 2001)
+---------------------------------
+ * Added string centring for vector fonts and functions to set/reset this mode
+ * Added string centring for bitmap fonts and functions to set/reset this mode
+ * Added two demos about string centering (bitmapped and vector fonts)
+ * Removed some unused features (character anchor procedure)
+ * Small fixes in code and updates in functions
+ * Added 4 new bitmapped fonts
+
+Version 1.21 (20 March 2001)
+---------------------------------
+ * Multiplatforming fix in function: glfLoadBMFFont
+ * Some cosmetic changes in code
+ * Some non critical bug fixes in demos
+ * Added new demo for Win platform (previous demos use GLUT)
+
+Version 1.2 (1 December 2000)
+---------------------------------
+ * Added new feature: Now You can use multiple bitmapped fonts at same time,
+   up to 256 fonts (defined in glf.c)
+ * Added functions for work with multiple BMF fonts: loading, unloading, font choosing ...
+ * Added new demo (bitmap_mult.c), which shows how to draw by multiple fonts at the same time
+ * Added new feature: Draw bitmap font by mask
+ * New demo (bitmap_mask.c), which shows, how to use masked bitmap fonts
+ * Added 5 new bitmapped fonts
+ * Improvements, bug fixes in bitmap fonts drawing, correted work with OpenGL,
+   corrected some functions.
+
+Version 1.11
+---------------------------------
+ * GLF standart release contains 5 bitmapped fonts
+ * New demo - bitmap_scale.c
+ * Code improvement and bug fixes
+
+Version 1.1 (25 October 2000)
+---------------------------------
+ * Added new feature of library: Drawing Bitmapped Text
+ * New demo: bitmap_text.c, shows bitmapped text
+ * New demo: bitmap_sym.c, shows 0..255 ASCII bitmapped characters
+ * Added two new bitmapped fonts, fixed.bmf and times_new.bmf
+ * Added bmf.htm - Bitmapped fonts file format description
+ * bug in Console memory allocation, memory never be deallocated,
+   added new function glfClose(), if You want to finish usage of library
+
+Version 1.0 (Release)
+---------------------------------
+ * Final version of GLF library!
+ * Added new demo: contour.c, that shows contour usage
+ * Added new feature: contoured text, and functions for work with it
+
+Version 0.9 (Release candidate 3) (2 August 2000)
+--------------------------------------------------
+ * Added new fonts: Broadway, Gothic, Penta, Cricket.
+   These fotns and Garamond font are added to additional fonts pack
+ * Added new demo 'solid3d.c', which demonstrates 3d solid text drawing
+ * Added 3D Solid Text support
+ * Small fixes and improvements
+
+Version 0.8 (Release candidate 2)
+---------------------------------
+ * Added new demo 'console.c' which demonstrates console mode usage
+ * Added new feature: console mode and console mode control functions
+ * Added new font Techno Normal, Resolution 0 (for small text)
+ * Some small improvements and fixes
+
+Version 0.7 (Release candidate 1)
+---------------------------------
+ * Documentation updated
+ * Now you can change space size: glfSetSpaceSize, glfGetSpaceSize
+ * glfGetStringBounds, glfGetStringBounds - get string bounds
+ * Maded more compatibility with others (non Windows/Linux) systems
+   and compilers
+ * Some small fixes and improved draw functions
+
+Version 0.6 (First Prerelease)
+------------------------------
+ * Added support to draw textured text
+ * Added new demo textured.c (how to draw textured text)
+ * Added new demo romkalogo.c
+ * Added some new constants to GLF library (see glf.h header)
+ * Added 2 new functions: glfEnable and glfDisable (enable and disable some
+   features in library)
+ * Now You can set anchor point of each symbol (function glfSetAnchorPoint)
+ * Added new font: Crystal Font
+
+Version 0.5
+-----------
+ * Now GLF You can download in two formats: .zip and .tar.gz
+ * Added new demo 'symtest.c' in demo directory
+ * Added new makefiles for HPUX, Solaris and IRIX
+ * New functions for text drawing by specified font:
+   glfDrawWiredSymbolF, glfDrawWiredStringF, glfDrawSolidSymbolF
+   glfDrawSolidStringF, glfDraw3DWiredSymbolF, glfDraw3DWiredStringF
+ * New function: glfInit() - Library initialization (must be called
+   before any usage of library)
+ * Bug fixed: from ver. 0.5 GLF now works with non Intel platforms:
+   SunOS, IRIX, HPUX, AIX, MacOS
+ * Added two new fonts Arial Normal and Courier Normal
+
+Version 0.4
+-----------
+ * Now GLF library supports up to 256 fonts loaded at once.
+ * Now GLF library work correctly on non windows/linux platforms:
+   SunOS, IRIX, HPUX, AIX, ...
+ * Fixed comments. Now all comments in ANSI C style /* ... */
+ * Code reviewed, fixed small bugs
+
+Version 0.3
+-----------
+ * Added 3D Wired Text Support
+ * Added functions to set space between symbols and 3D text depth
+ * New font added - Techno Normal (Resolution 1)
+ * Added Demos directory and 5 new demos (How to use GLF library)
+ * Added Docs directory and description of functions (functions.txt)
+
+Version 0.2
+-----------
+ * Added solid font draw functions (glfDrawSolidSybol, glfDrawSolidString)
+ * New font added - Times New Roman (Resolution 1)
+ * New Makefile for Linux added
+
+Version 0.1 Alpha (First Release) (4 July 2000)
+------------------------------------------------
+ * Load and Unload Font functions
+ * Realized Wired Draw (glfDrawWiredSybol, glfDrawWiredString)
+ * Included one font - Garamond (Resolution 1)

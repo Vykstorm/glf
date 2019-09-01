@@ -1,0 +1,16 @@
+CFLAGS = -Ae
+INCPATH = -I/opt/graphics/OpenGL/include -I/opt/graphics/OpenGL/contrib/libglut
+LIBPATH = -L/opt/graphics/OpenGL/lib -L/opt/graphics/OpenGL/contrib/libglut
+LIBS = -lglut -lGLU -lGL -lXmu -lXt -lX11 -lXext -lXi -lm
+CC = cc
+
+all: test
+
+glf.o: glf.c
+	$(CC) $(CFLAGS) $(INCPATH) -c glf.c
+        
+test.o: test.c
+	$(CC) $(CFLAGS) $(INCPATH) -c test.c
+
+test: test.o glf.o
+	$(CC) $(CFLAGS) $(INCPATH) $(LIBPATH) test.o glf.o -o test $(LIBS)

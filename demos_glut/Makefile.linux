@@ -1,0 +1,49 @@
+CFLAGS = -I/usr/include/GL -Wall
+LIBS = -L/usr/X11R6/lib -lglut -lGLU -lGL -lXmu -lXt -lX11 -lXi -lm
+CC = gcc
+
+all: wired solid simply demo1 3dtext symtest romkalogo textured console \
+     solid3d contour bitmap_text bitmap_sym bitmap_scale bitmap_mask bitmap_mult \
+     bitmap_centering centering direction
+
+glf.o: ../glf.c
+	$(CC) $(CFLAGS) -c ../glf.c
+
+wired: wired.o glf.o
+	$(CC) $(CFLAGS) wired.o glf.o -o wired $(LIBS)
+solid: solid.o glf.o
+	$(CC) $(CFLAGS) solid.o glf.o -o solid $(LIBS)
+simply: simply.o glf.o
+	$(CC) $(CFLAGS) simply.o glf.o -o simply $(LIBS)
+demo1: demo1.o glf.o
+	$(CC) $(CFLAGS) demo1.o glf.o -o demo1 $(LIBS)
+3dtext: 3dtext.o glf.o
+	$(CC) $(CFLAGS) 3dtext.o glf.o -o 3dtext $(LIBS)
+symtest: symtest.o glf.o
+	$(CC) $(CFLAGS) symtest.o glf.o -o symtest $(LIBS)
+romkalogo: romkalogo.o glf.o
+	$(CC) $(CFLAGS) romkalogo.o glf.o -o romkalogo $(LIBS)
+textured: textured.o glf.o texture.o
+	$(CC) $(CFLAGS) textured.o glf.o texture.o -o textured $(LIBS)
+console: console.o glf.o
+	$(CC) $(CFLAGS) console.o glf.o -o console $(LIBS)
+solid3d: solid3d.o glf.o
+	$(CC) $(CFLAGS) solid3d.o glf.o -o solid3d $(LIBS)
+contour: contour.o glf.o
+	$(CC) $(CFLAGS) contour.o glf.o -o contour $(LIBS)
+bitmap_text: bitmap_text.o glf.o
+	$(CC) $(CFLAGS) bitmap_text.o glf.o -o bitmap_text $(LIBS)
+bitmap_sym: bitmap_sym.o glf.o
+	$(CC) $(CFLAGS) bitmap_sym.o glf.o -o bitmap_sym $(LIBS)
+bitmap_scale: bitmap_scale.o glf.o
+	$(CC) $(CFLAGS) bitmap_scale.o glf.o -o bitmap_scale $(LIBS)
+bitmap_mask: bitmap_mask.o glf.o texture.o
+	$(CC) $(CFLAGS) bitmap_mask.o glf.o texture.o -o bitmap_mask $(LIBS)
+bitmap_mult: bitmap_mult.o glf.o
+	$(CC) $(CFLAGS) bitmap_mult.o glf.o -o bitmap_mult $(LIBS)
+bitmap_centering: bitmap_centering.o glf.o
+	$(CC) $(CFLAGS) bitmap_centering.o glf.o -o bitmap_centering $(LIBS)
+centering: centering.o glf.o
+	$(CC) $(CFLAGS) centering.o glf.o -o centering $(LIBS)
+direction: direction.o glf.o
+	$(CC) $(CFLAGS) direction.o glf.o -o direction $(LIBS)

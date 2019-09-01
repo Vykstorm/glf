@@ -1,0 +1,5 @@
+rm -f *.o
+rm -f *.a
+rm -f *.dll
+rm -f *.exe
+rm -f *.def

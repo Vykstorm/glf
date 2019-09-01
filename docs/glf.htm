@@ -1,0 +1,44 @@
+<HTML>
+<BODY>
+
+<P align=center><FONT size=4><U>GLF File Format 
+Description</U></FONT></P>
+
+<P align=center><FONT size=4><U>Version 1.0</U></FONT></P>
+<P align=left>1. Header - 128 Bytes<BR>2. Font Data (One Symbol)<BR>... <BR>N. 
+Font Data (Last Symbol)</P>
+<P align=left>&nbsp;</P>
+<P align=left><U>1. Header (128 Bytes)</U></P>
+<UL>
+  <LI>
+  <DIV align=left>Font&nbsp;Label ("GLF", 3 Bytes)</DIV>
+  <LI>
+  <DIV align=left>Font Name ("...", 96 Bytes)</DIV>
+  <LI>
+  <DIV align=left>Total Symbols in Font File (Number, 1 Byte)</DIV>
+  <LI>
+  <DIV align=left>Reserved (28 Bytes)</DIV></LI></UL>
+<P align=left><U>2. Font Data</U></P>
+<UL>
+  <LI>
+  <DIV align=left>Symbol code (Number 1 Byte) - Symbol code in ASCII table</DIV>
+  <LI>
+  <DIV align=left>Number of Vertexs in symbol (Number, 1 Byte)</DIV>
+  <LI>
+  <DIV align=left>Number of Facets in symbol (Number, 1 Byte)</DIV>
+  <LI>
+  <DIV align=left>Total Lines in symbol (Number, 1 Byte)</DIV>
+  <LI>
+  <DIV align=left>Vertex Data (Float Numbers, Total: 4*NumberOfVertexs*2 Bytes) 
+  - X and Y coordinates of symbol (X range -1..1, Y range -1..1)</DIV>
+  <LI>
+  <DIV align=left>Face Data (Numbers, Total: 3*TotalOfFaces Bytes) - Each 3 Byte 
+  Element defines triangle, Each Number in Element show element number in vertex 
+  data</DIV>
+  <LI>
+  <DIV align=left>Line Data (Array of numbers: TotalLines 
+  Bytes) - Array element it is number of last vertex of line in vertex 
+  data</DIV></LI></UL>
+
+</BODY>
+</HTML>

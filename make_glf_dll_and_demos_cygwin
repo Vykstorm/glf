@@ -1,0 +1,4 @@
+ make -f makefile_glf_dll.cygwin
+ gcc -mno-cygwin -fnative-struct -o  test.exe test.c -L/lib/mingw -lmsvcrt -I/usr/include -L/lib/w32api -lopengl32 -lglu32 -lglut32 -L. -lglf  
+ #gcc -o test.exe test.o  -L/lib/w32api -lopengl32 -L. -lglf  -L/lib/mingw
+ #-lglu32 -lglut32 -lglut -lm -lmsvcrt

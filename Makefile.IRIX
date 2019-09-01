@@ -1,0 +1,11 @@
+CFLAGS = -n32
+LIBS = -lglut -lGLU -lGL -lXmu -lXt -lX11 -lm
+CC = cc
+
+all: test
+
+glf.o: glf.c
+	$(CC) $(CFLAGS) -c glf.c
+
+test: test.o glf.o
+	$(CC) $(CFLAGS) test.o glf.o -o test $(LIBS)

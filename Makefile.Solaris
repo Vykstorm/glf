@@ -1,0 +1,16 @@
+CFLAGS = 
+INCPATH = -I/usr/local/include
+LIBPATH = -L/usr/local/lib
+LIBS = -lglut -lGLU -lGL -lXmu -lXt -lX11 -lXi -lm
+CC = cc
+
+all: test
+
+glf.o: glf.c
+	$(CC) $(CFLAGS) $(INCPATH) -c glf.c
+        
+test.o: test.c
+	$(CC) $(CFLAGS) $(INCPATH) -c test.c
+
+test: test.o glf.o
+	$(CC) $(CFLAGS) $(LIBPATH) test.o glf.o -o test $(LIBS)

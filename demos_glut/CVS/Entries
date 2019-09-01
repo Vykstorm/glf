@@ -1,0 +1,27 @@
+/3dtext.c/1.1.1.1/Tue Oct 23 13:43:06 2001//
+/Makefile/1.1.1.1/Tue Oct 23 13:43:07 2001//
+/Makefile.Win/1.1.1.1/Tue Oct 23 13:43:07 2001//
+/Makefile.linux/1.1.1.1/Tue Oct 23 13:43:07 2001//
+/bitmap_centering.c/1.1.1.1/Tue Oct 23 13:43:06 2001//
+/bitmap_mask.c/1.1.1.1/Tue Oct 23 13:43:06 2001//
+/bitmap_mult.c/1.1.1.1/Tue Oct 23 13:43:06 2001//
+/bitmap_scale.c/1.1.1.1/Tue Oct 23 13:43:07 2001//
+/bitmap_sym.c/1.1.1.1/Tue Oct 23 13:43:07 2001//
+/bitmap_text.c/1.1.1.1/Tue Oct 23 13:43:07 2001//
+/bitmap_text2.c/1.1.1.1/Tue Oct 23 13:43:07 2001//
+/centering.c/1.1.1.1/Tue Oct 23 13:43:06 2001//
+/console.c/1.1.1.1/Tue Oct 23 13:43:06 2001//
+/contour.c/1.1.1.1/Tue Oct 23 13:43:07 2001//
+/demo1.c/1.1.1.1/Tue Oct 23 13:43:07 2001//
+/direction.c/1.1.1.1/Tue Oct 23 13:43:07 2001//
+/romkalogo.c/1.1.1.1/Tue Oct 23 13:43:07 2001//
+/simply.c/1.1.1.1/Tue Oct 23 13:43:06 2001//
+/solid.c/1.1.1.1/Tue Oct 23 13:43:06 2001//
+/solid3d.c/1.1.1.1/Tue Oct 23 13:43:06 2001//
+/symtest.c/1.1.1.1/Tue Oct 23 13:43:06 2001//
+/texture.c/1.1.1.1/Tue Oct 23 13:43:06 2001//
+/texture.h/1.1.1.1/Tue Oct 23 13:43:06 2001//
+/texture.rgb/1.1.1.1/Tue Oct 23 13:43:06 2001//
+/textured.c/1.1.1.1/Tue Oct 23 13:43:06 2001//
+/wired.c/1.1.1.1/Tue Oct 23 13:43:06 2001//
+D

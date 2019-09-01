@@ -1,0 +1,70 @@
+OPENGL_DIR=../../3d_mec-1.99/usr/include
+
+DEBUG =  -Wall -O2
+CXXFLAGS = $(DEBUG)
+
+CFLAGS = $(DEBUG) -mno-cygwin -fnative-struct
+
+DLL_CFLAGS = -DHAVE_CONFIG_H 
+AS = as
+DLLTOOL = dlltool
+DLLWRAP = dllwrap
+
+CPPFLAGS = 
+DLL_NAME = glf.dll
+DLL_EXP_LIB = libglf.a
+DLL_EXP_DEF = glf.def
+
+all: $(DLL_NAME)
+
+SRCS  = glf.c
+
+OBJS  = $(SRCS:.cc=.o)
+OBJS := $(OBJS:.c=.o)
+
+INCLUDE =  -I$(OPENGL_DIR) -I.
+
+          
+LIBR =  -lopengl32 -lglu32 -L/lib/mingw -lmsvcrt
+
+
+DLL_SRCS  =  dllinit.c $(SRCS)
+ 
+DLL_OBJS  = $(DLL_SRCS:.cc=.o)
+DLL_OBJS := $(DLL_OBJS:.c=.o)
+
+
+all:
+
+DLLWRAP_FLAGS = --export-all --output-def $(DLL_EXP_DEF) \
+	--implib $(DLL_EXP_LIB) \
+	--driver-name $(CC) -mno-cygwin -fnative-struct
+
+$(DLL_NAME) $(DLL_EXP_DEF) $(DLL_EXP_LIB): $(DLL_OBJS)
+	$(DLLWRAP) $(DLLWRAP_FLAGS) -o $(DLL_NAME) \
+	    $(DLL_OBJS) $(DLL_LDFLAGS) $(LIBR) 
+
+
+#
+# dependencies.
+#
+
+dllinit.o: dllinit.c
+
+glf.o: glf.c
+
+#
+# default rules for building DLL objects. Note that client programs (ie.,
+# the ones that *use* the DLL) have to be compiled without the DLL_CFLAGS
+# flags.
+#
+
+.cc.o:
+	$(CXX) -c $(DLL_CFLAGS) $(CPPFLAGS) $(CXXFLAGS) -o $@ $<
+.c.o:
+	$(CC) -c $(DLL_CFLAGS) $(CPPFLAGS) $(CFLAGS) $(INCLUDE)  -o  $@ $<
+
+
+clean:
+	rm -f $(OBJS) $(DLL_NAME) $(DLL_EXP_LIB) $(DLL_EXP_DEF) $(TESTPROGS)
+

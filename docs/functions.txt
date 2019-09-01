@@ -1,0 +1,159 @@
+GLF Library
+Version 1.4
+
+Functions description:
+
+Function: void glfInit();
+Example: glfInit();
+Description: Library initialization (must be called before any usage of library)
+
+Function: void glfLoadFont(char *font_name);
+Example: glfLoadFont("garamond1.glf");
+Description: Loads font to memory from .glf file.
+
+Function: int glfUnloadFont();
+Example: glfUnloadFont();
+Description: Unload font from memory
+
+Function: int glfUnloadFontD(int font_descriptor);
+Example: glfUnloadFontD(1);
+Description: Unload font by font_descriptor 
+
+Function: void glfDrawWiredSymbol(unsigned char s);
+Example: glfDrawWiredSymbol('a');
+Description: Draws wired symbol
+
+Function: void glfDrawWiredString(char *s);
+Example: glfDrawWiredString("Hello!");
+Description: Draws wired string
+
+Function: void glfDrawSolidSymbol(unsigned char s);
+Example: glfDrawSolidSymbol('b');
+Description: Draws solid symbol
+
+Function: void glfDrawSolidString(char *s);
+Example: glfDrawSolidString("GLF");
+Description: Draws solid string
+
+Function: void glfDraw3DWiredSymbol(unsigned char s);
+Example: glfDraw3DWiredSymbol('c');
+Description: Draws 3D wired symbol
+
+Function: void glfDraw3DWiredString(char *s);
+Example: glfDraw3DWiredString("Library");
+Description: Draws 3D wired string
+
+Function: void glfDraw3DSolidSymbol(char s);
+Example: glfDraw3DSolidSymbol('c');
+Description: Draws 3D solid symbol
+
+Function: void glfDraw3DSolidString(char *s);
+Example: glfDraw3DSolidString("Hello");
+Description: Draws 3D solid string
+
+
+Function: void glfSetSymbolSpace(float sp);
+Example: glfSetSymbolSpace(0.2);
+Description: This function sets space between symbols
+
+Function: float glfGetSymbolSpace();
+Example: a = glfGetSymbolSpace(); // a is float
+Description: This function returns current space between symbols
+
+Function: void glfSetSymbolDepth(float dpth);
+Example: glfSetSymbolDepth(0.3);
+Description: This function sets depth of 3D text
+
+Function: float glfGetSymbolDepth();
+Example: b = glfGetSymbolDepth(); // b is float
+Description: This function returns depth of 3D text
+
+Function: int glfSetCurrentFont(int Font_Descriptor); /* Set current font */
+Example:: glfSetCurrentFont(1);
+Description: Set current font
+
+Function: int glfGetCurrentFont();
+Example:  a = glfGetCurrentFont(); // a is integer
+Description: Get current font descriptor
+
+-------- Text drawing functions by specified font -------
+
+void glfDrawWiredSymbolF(int font_descriptor, unsigned char s);
+void glfDrawWiredStringF(int font_descriptor, char *s);
+void glfDrawSolidSymbolF(int font_descriptor, unsigned char s);
+void glfDrawSolidStringF(int font_descriptor, char *s);
+void glfDraw3DWiredSymbolF(int font_descriptor, unsigned char s);
+void glfDraw3DWiredStringF(int font_descriptor, char *s);
+
+Function: void glfGetStringBounds(char *s, float *minx, float *miny, float *maxx, float *maxy);
+Description: Get string bounds (minimal x, y and maximal x, y)
+
+Function: void glfGetStringBoundsF(int fd, char *s, float *minx, float *miny, float *maxx, float *maxy);
+Description: Get string bounds by specified font
+
+Function: void  glfSetSymbolSpace(float sp);
+Description: Set space between symbols (bdefault 0.2f)
+
+Function: float glfGetSymbolSpace(); 
+Description: Get space between symbols
+
+Function: void glfSetSpaceSize(float sp);
+Description: Set space size (by default 2.0f)
+
+Function: float gltGetSpaceSize();
+Description: Get space size
+
+Function: void glfSetSymbolDepth(float dpth);
+Description: Set 3D symbols depth in 3D space (default 0.2f)
+
+Function: float glfGetSymbolDepth();
+Description: Get current 3D symbols depth
+
+Function: int glfSetCurrentFont(int Font_Descriptor);
+Description: Set current font
+
+Function: int glfGetCurrentFont();
+Description: Get current font
+
+Function: void glfSetAnchorPoint(int anchp);
+Example: glfSetAnchorPoint(GLF_CENTER);
+Description: Set anchor point of each symbol, anchp can be:
+GLF_LEFT_UP, GLF_LEFT_CENTER, GLF_LEFT_DOWN
+GLF_CENTER_UP, GLF_CENTER_CENTER, GLF_CENTER_DOWN, GLF_CENTER
+(default: GLF_CENTER)
+
+Function: void glfEnable(int what);
+Description: Enable GLF feature. what can be:
+GLF_CONSOLE_MESSAGES, GLF_TEXTURING, GLF_CONTOURING
+
+Function: void glfDisable(int what);
+Description: Disable GLF feature. what can be:
+GLF_CONSOLE_MESSAGES, GLF_TEXTURING, GLF_CONTOURING
+
+
+-------- Console functions --------
+
+Function: void glfSetConsoleParam(int width, int height);
+Example: glfSetConsoleParam(40, 10);
+Description: Set console width and height (in symbols)
+
+Function: int glfSetConsoleFont(int Font_Descriptor);
+Example: glfSetConsoleFont(font1); // font1 is loaded
+Description: Set console font
+
+Function: void glfConsoleClear();
+Example: glfConsoleClear();
+Description: Clear console and set cursor coorinates at 0, 0
+
+Function: void glfPrint(char *s, int lenght);
+Example: glfPrint(s, 10);
+Description: Print first 'lenght' symbols of string s
+
+Function: void glfPrintString(char *s);
+Example: glfPrintString("Hello GLF!");
+Description: Print string s
+
+Function: void glfPrintChar(char s);
+Example: glfPrintChar('a');
+Description: Print char s
+

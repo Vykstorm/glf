@@ -1,0 +1,32 @@
+
+Main Files: 
+-----------
+glf.c      - Main library module
+glf.h      - Header for library
+readme.txt - Readme
+
+Font Files:
+-----------
+./fonts/*.glf - Vector fonts (GLF Format)
+./fonts/*.bmf - Bitmap fonts (BMF Format)
+
+Test:
+-----
+Makefile.win      - Makefile for Windows
+Makefile.Solaris  - Makefile for Solaris
+Makefile.linux    - Makefile for Linux
+Makefile.IRIX     - Makefile for IRIX
+Makefile.HPUX     - Makefile for HPUX
+glf.dsw           - Visual C++ Project file
+test.c            - Test demo
+
+Demos:
+------
+./demos-glut    - GLF Demos (Based on GLUT)
+./demos-win     - GLF Demos (Win32 demos)
+
+Documentation:
+--------------
+./docs/functions.txt - Functions of GLF library
+./docs/bmf.htm - BMF format description (Bitmapped fonts)
+./docs/glf.htm - GLF format description (Vector fonts)
